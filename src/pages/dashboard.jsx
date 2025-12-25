@@ -306,31 +306,52 @@ const Dashboard = () => {
                   ))}
                 </div>
 
-                <div className="space-y-3 max-h-96 overflow-y-auto">
-                  {filteredServices.map(service => (
-                    <ServiceCard 
-                      key={service.id}
-                      service={service}
-                      isSelected={selectedService?.id === service.id}
-                      onClick={() => setSelectedService(service)}
-                    />
-                  ))}
-                </div>
-
-                {selectedService && (
-                  <>
-                    <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-4">Select Country</h3>
-                    <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
-                      {COUNTRIES.map(country => (
-                        <CountryCard 
-                          key={country.id}
-                          country={country}
-                          isSelected={selectedCountry?.id === country.id}
-                          onClick={() => setSelectedCountry(country)}
-                        />
-                      ))}
+                {!selectedService ? (
+                  <div className="space-y-3 max-h-96 overflow-y-auto">
+                    {filteredServices.map(service => (
+                      <ServiceCard 
+                        key={service.id}
+                        service={service}
+                        isSelected={false}
+                        onClick={() => setSelectedService(service)}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">{selectedService.icon}</span>
+                        <div>
+                          <div className="font-medium text-gray-900">{selectedService.name}</div>
+                          <div className="text-sm text-gray-500">{selectedService.category}</div>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={() => {
+                          setSelectedService(null);
+                          setSelectedCountry(null);
+                        }}
+                        className="text-gray-400 hover:text-gray-600"
+                      >
+                        <X size={16} />
+                      </button>
                     </div>
-                  </>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Select Country & Operator</h3>
+                      <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto">
+                        {COUNTRIES.map(country => (
+                          <CountryCard 
+                            key={country.id}
+                            country={country}
+                            isSelected={selectedCountry?.id === country.id}
+                            onClick={() => setSelectedCountry(country)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 )}
 
                 {selectedService && selectedCountry && (
