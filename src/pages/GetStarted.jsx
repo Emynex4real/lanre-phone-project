@@ -13,13 +13,13 @@ const PricingCard = ({ title, price, features, popular, buttonText, delay }) => 
     viewport={{ once: true }}
     className={`relative p-6 rounded-xl border transition-all ${
       popular 
-        ? 'bg-gradient-to-b from-blue-600/20 to-purple-600/20 border-blue-500/50 scale-105' 
-        : 'bg-slate-800/40 border-white/5 hover:border-blue-500/30'
+        ? 'bg-gradient-to-b from-primary-pink/20 to-primary-pink/20 border-primary-pink/50 scale-105' 
+        : 'bg-background-white border border-gray-200 hover:border-primary-pink/30'
     }`}
   >
     {popular && (
       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-        <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+        <div className="bg-primary-pink text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
           <Star size={12} />
           Most Popular
         </div>
@@ -27,13 +27,13 @@ const PricingCard = ({ title, price, features, popular, buttonText, delay }) => 
     )}
     
     <div className="text-center">
-      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-      <div className="text-2xl font-bold text-blue-400 mb-4">{price}</div>
+      <h3 className="text-xl font-bold text-text-dark mb-2">{title}</h3>
+      <div className="text-2xl font-bold text-primary-pink mb-4">{price}</div>
       
       <ul className="space-y-2 mb-6 text-sm">
         {features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-2 text-gray-300">
-            <CheckCircle size={14} className="text-green-500 flex-shrink-0" />
+          <li key={i} className="flex items-center gap-2 text-text-dark">
+            <CheckCircle size={14} className="text-primary-green flex-shrink-0" />
             <span>{feature}</span>
           </li>
         ))}
@@ -41,8 +41,8 @@ const PricingCard = ({ title, price, features, popular, buttonText, delay }) => 
       
       <button className={`w-full py-2 rounded-lg font-medium transition ${
         popular
-          ? 'bg-blue-600 text-white hover:bg-blue-700'
-          : 'bg-slate-700 text-white hover:bg-slate-600'
+          ? 'bg-primary-pink text-white hover:bg-primary-pink/90'
+          : 'bg-gray-200 text-text-dark hover:bg-gray-300'
       }`}>
         {buttonText}
       </button>
@@ -119,7 +119,7 @@ const GetStarted = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-background-light text-text-dark">
       <Navbar />
       
       <div className="pt-24 pb-16 px-4">
@@ -131,7 +131,7 @@ const GetStarted = () => {
             className="text-center mb-12"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Get <span className="text-blue-500">Started</span> Today
+              Get <span className="text-primary-pink">Started</span> Today
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Create your account and start verifying accounts instantly. Choose the plan that fits your needs.
@@ -145,31 +145,31 @@ const GetStarted = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
             >
-              <div className="bg-slate-800/40 p-8 rounded-2xl border border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-6">Create Your Account</h2>
+              <div className="bg-background-white p-8 rounded-2xl border border-gray-200">
+                <h2 className="text-2xl font-bold text-text-dark mb-6">Create Your Account</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name Fields */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-text-dark mb-2">
                         First Name
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-light" size={18} />
                         <input
                           type="text"
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleChange}
-                          className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
+                          className="w-full pl-10 pr-4 py-3 bg-background-light border border-gray-300 rounded-lg text-text-dark placeholder-text-light focus:outline-none focus:border-primary-pink transition"
                           placeholder="John"
                           required
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-text-dark mb-2">
                         Last Name
                       </label>
                       <input
@@ -177,7 +177,7 @@ const GetStarted = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
+                        className="w-full px-4 py-3 bg-background-light border border-gray-300 rounded-lg text-text-dark placeholder-text-light focus:outline-none focus:border-primary-pink transition"
                         placeholder="Doe"
                         required
                       />
@@ -186,17 +186,17 @@ const GetStarted = () => {
 
                   {/* Email Field */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-text-dark mb-2">
                       Email Address
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-light" size={18} />
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
+                        className="w-full pl-10 pr-4 py-3 bg-background-light border border-gray-300 rounded-lg text-text-dark placeholder-text-light focus:outline-none focus:border-primary-pink transition"
                         placeholder="john@example.com"
                         required
                       />
@@ -205,24 +205,24 @@ const GetStarted = () => {
 
                   {/* Password Fields */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-text-dark mb-2">
                       Password
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-light" size={18} />
                       <input
                         type={showPassword ? 'text' : 'password'}
                         name="password"
                         value={formData.password}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-12 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
+                        className="w-full pl-10 pr-12 py-3 bg-background-light border border-gray-300 rounded-lg text-text-dark placeholder-text-light focus:outline-none focus:border-primary-pink transition"
                         placeholder="Create a strong password"
                         required
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-light hover:text-text-dark transition"
                       >
                         {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                       </button>
@@ -230,24 +230,24 @@ const GetStarted = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-text-dark mb-2">
                       Confirm Password
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-light" size={18} />
                       <input
                         type={showConfirmPassword ? 'text' : 'password'}
                         name="confirmPassword"
                         value={formData.confirmPassword}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-12 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
+                        className="w-full pl-10 pr-12 py-3 bg-background-light border border-gray-300 rounded-lg text-text-dark placeholder-text-light focus:outline-none focus:border-primary-pink transition"
                         placeholder="Confirm your password"
                         required
                       />
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-light hover:text-text-dark transition"
                       >
                         {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                       </button>
@@ -290,7 +290,7 @@ const GetStarted = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition flex items-center justify-center gap-2"
+                    className="w-full bg-primary-pink text-white py-3 rounded-lg font-bold hover:bg-primary-pink/90 transition flex items-center justify-center gap-2"
                   >
                     Create Account
                     <ArrowRight size={20} />
@@ -301,7 +301,7 @@ const GetStarted = () => {
                 <div className="mt-6 text-center">
                   <p className="text-gray-400">
                     Already have an account?{' '}
-                    <Link to="/login" className="text-blue-400 hover:text-blue-300 transition font-medium">
+                    <Link to="/login" className="text-primary-pink hover:text-primary-pink/80 transition font-medium">>
                       Sign in here
                     </Link>
                   </p>
@@ -315,7 +315,7 @@ const GetStarted = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-6">Choose Your Plan</h2>
+              <h2 className="text-2xl font-bold text-text-dark mb-6">Choose Your Plan</h2>
               <div className="space-y-4">
                 {pricingPlans.map((plan, i) => (
                   <PricingCard key={i} {...plan} delay={i * 0.1} />
@@ -323,9 +323,9 @@ const GetStarted = () => {
               </div>
 
               {/* Benefits */}
-              <div className="mt-8 p-6 bg-green-600/10 border border-green-500/20 rounded-xl">
-                <h3 className="text-lg font-bold text-white mb-4">Why Choose Uchenzylogs?</h3>
-                <ul className="space-y-2 text-sm text-green-300">
+              <div className="mt-8 p-6 bg-primary-green/10 border border-primary-green/20 rounded-xl">
+                <h3 className="text-lg font-bold text-text-dark mb-4">Why Choose Uchenzylogs?</h3>
+                <ul className="space-y-2 text-sm text-primary-green">
                   <li className="flex items-center gap-2">
                     <CheckCircle size={14} />
                     Instant SMS delivery (avg. 10 seconds)

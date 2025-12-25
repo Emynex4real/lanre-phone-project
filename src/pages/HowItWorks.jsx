@@ -12,18 +12,18 @@ const StepCard = ({ step, title, desc, icon: Icon, details, delay }) => (
     className="relative"
   >
     <div className="flex flex-col items-center text-center">
-      <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+      <div className="w-20 h-20 rounded-full bg-primary-pink flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-[0_0_30px_rgba(189,47,102,0.4)]">
         {step}
       </div>
-      <div className="w-16 h-16 rounded-lg bg-slate-800/60 flex items-center justify-center mb-4">
-        <Icon className="text-blue-400" size={24} />
+      <div className="w-16 h-16 rounded-lg bg-background-white border border-gray-200 flex items-center justify-center mb-4">
+        <Icon className="text-primary-pink" size={24} />
       </div>
-      <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-      <p className="text-gray-400 mb-4">{desc}</p>
+      <h3 className="text-xl font-bold text-text-dark mb-3">{title}</h3>
+      <p className="text-text-light mb-4">{desc}</p>
       <ul className="text-sm text-gray-500 space-y-1">
         {details.map((detail, i) => (
           <li key={i} className="flex items-center gap-2">
-            <CheckCircle size={12} className="text-green-500" />
+            <CheckCircle size={12} className="text-primary-green" />
             {detail}
           </li>
         ))}
@@ -84,15 +84,15 @@ const ProcessFlow = () => {
     <div className="py-24">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Simple 4-Step Process</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Simple 4-Step Process</h2>
+          <p className="text-text-light max-w-2xl mx-auto">
             Get your SMS verification code in under a minute with our streamlined process.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connecting Lines (Desktop) */}
-          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 z-0"></div>
+          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary-pink via-primary-pink to-primary-pink z-0"></div>
 
           {steps.map((step, i) => (
             <StepCard key={i} {...step} delay={i * 0.1} />
@@ -167,8 +167,8 @@ const FAQ = () => {
     <div className="py-24">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-400">
+          <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Frequently Asked Questions</h2>
+          <p className="text-text-light">
             Got questions? We've got answers to help you get started quickly.
           </p>
         </div>
@@ -181,10 +181,10 @@ const FAQ = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl bg-slate-800/40 border border-white/5"
+              className="p-6 rounded-xl bg-background-white border border-gray-200"
             >
-              <h3 className="text-lg font-bold text-white mb-3">{faq.q}</h3>
-              <p className="text-gray-400">{faq.a}</p>
+              <h3 className="text-lg font-bold text-text-dark mb-3">{faq.q}</h3>
+              <p className="text-text-light">{faq.a}</p>
             </motion.div>
           ))}
         </div>
@@ -195,7 +195,7 @@ const FAQ = () => {
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-background-light text-text-dark">
       <Navbar />
       
       {/* Hero Section */}
@@ -206,13 +206,13 @@ const HowItWorks = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            How It <span className="text-blue-500">Works</span>
+            How It <span className="text-primary-pink">Works</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            className="text-xl text-text-light max-w-3xl mx-auto"
           >
             Getting your SMS verification code is simple and fast. Follow our easy 4-step process.
           </motion.p>
@@ -225,19 +225,19 @@ const HowItWorks = () => {
 
       {/* CTA Section */}
       <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-10 md:p-16 text-center">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink rounded-3xl p-10 md:p-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Try It Yourself?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of users who trust our platform for fast and reliable SMS verification.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center gap-2 justify-center">
+            <button className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center gap-2 justify-center">
               Get Started Now
               <ArrowRight size={20} />
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-blue-700 transition">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary-pink transition">
               Watch Demo
             </button>
           </div>

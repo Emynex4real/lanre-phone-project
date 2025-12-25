@@ -11,31 +11,31 @@ const ServiceCard = ({ icon: Icon, title, desc, features, price, popular, delay 
     viewport={{ once: true }}
     className={`relative p-8 rounded-2xl border transition-all ${
       popular 
-        ? 'bg-gradient-to-b from-blue-600/20 to-purple-600/20 border-blue-500/50' 
-        : 'bg-slate-800/40 border-white/5 hover:border-blue-500/30'
+        ? 'bg-gradient-to-b from-primary-pink/20 to-primary-pink/20 border-primary-pink/50' 
+        : 'bg-background-white border border-gray-200 hover:border-primary-pink/30'
     }`}
   >
     {popular && (
       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-        <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+        <div className="bg-primary-pink text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
           <Star size={14} />
           Most Popular
         </div>
       </div>
     )}
     
-    <div className="w-16 h-16 rounded-lg bg-blue-600/20 flex items-center justify-center mb-6">
-      <Icon className="text-blue-400" size={32} />
+    <div className="w-16 h-16 rounded-lg bg-primary-pink/20 flex items-center justify-center mb-6">
+      <Icon className="text-primary-pink" size={32} />
     </div>
     
-    <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-    <div className="text-3xl font-bold text-blue-400 mb-4">{price}</div>
-    <p className="text-gray-400 mb-6">{desc}</p>
+    <h3 className="text-2xl font-bold text-text-dark mb-2">{title}</h3>
+    <div className="text-3xl font-bold text-primary-pink mb-4">{price}</div>
+    <p className="text-text-light mb-6">{desc}</p>
     
     <ul className="space-y-3 mb-8">
       {features.map((feature, i) => (
-        <li key={i} className="flex items-center gap-3 text-gray-300">
-          <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+        <li key={i} className="flex items-center gap-3 text-text-dark">
+          <CheckCircle size={16} className="text-primary-green flex-shrink-0" />
           <span>{feature}</span>
         </li>
       ))}
@@ -43,8 +43,8 @@ const ServiceCard = ({ icon: Icon, title, desc, features, price, popular, delay 
     
     <button className={`w-full py-3 rounded-lg font-bold transition ${
       popular
-        ? 'bg-blue-600 text-white hover:bg-blue-700'
-        : 'bg-slate-700 text-white hover:bg-slate-600'
+        ? 'bg-primary-pink text-white hover:bg-primary-pink/90'
+        : 'bg-gray-200 text-text-dark hover:bg-gray-300'
     }`}>
       Get Started
     </button>
@@ -57,13 +57,13 @@ const PlatformCard = ({ name, logo, countries, delay }) => (
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ delay, duration: 0.5 }}
     viewport={{ once: true }}
-    className="p-6 rounded-xl bg-slate-800/40 border border-white/5 hover:border-blue-500/30 transition-all text-center"
+    className="p-6 rounded-xl bg-background-white border border-gray-200 hover:border-primary-pink transition-all text-center"
   >
-    <div className="w-16 h-16 rounded-lg bg-slate-700/50 flex items-center justify-center mx-auto mb-4">
+    <div className="w-16 h-16 rounded-lg bg-background-light flex items-center justify-center mx-auto mb-4">
       <span className="text-2xl">{logo}</span>
     </div>
-    <h3 className="text-lg font-bold text-white mb-2">{name}</h3>
-    <p className="text-gray-400 text-sm">{countries} countries</p>
+    <h3 className="text-lg font-bold text-text-dark mb-2">{name}</h3>
+    <p className="text-text-light text-sm">{countries} countries</p>
   </motion.div>
 );
 
@@ -139,7 +139,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-background-light text-text-dark">
       <Navbar />
       
       {/* Hero Section */}
@@ -150,13 +150,13 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Our <span className="text-blue-500">Services</span>
+            Our <span className="text-primary-pink">Services</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            className="text-xl text-text-light max-w-3xl mx-auto"
           >
             Choose the perfect plan for your SMS verification needs. From individual use to enterprise solutions.
           </motion.p>
@@ -167,8 +167,8 @@ const Services = () => {
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Choose Your Plan</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Choose Your Plan</h2>
+            <p className="text-text-light max-w-2xl mx-auto">
               Flexible pricing options to suit every need, from casual users to enterprise clients.
             </p>
           </div>
@@ -182,11 +182,11 @@ const Services = () => {
       </div>
 
       {/* Supported Platforms */}
-      <div className="py-24 bg-slate-800/30">
+      <div className="py-24 bg-background-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Supported Platforms</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Supported Platforms</h2>
+            <p className="text-text-light max-w-2xl mx-auto">
               We support verification for all major platforms and services worldwide.
             </p>
           </div>
@@ -203,8 +203,8 @@ const Services = () => {
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Global Coverage</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Global Coverage</h2>
+            <p className="text-text-light max-w-2xl mx-auto">
               Virtual numbers available from over 50 countries worldwide.
             </p>
           </div>
@@ -217,33 +217,33 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
                 viewport={{ once: true }}
-                className="p-4 rounded-lg bg-slate-800/40 border border-white/5 text-center hover:border-blue-500/30 transition-all"
+                className="p-4 rounded-lg bg-background-white border border-gray-200 text-center hover:border-primary-pink transition-all"
               >
-                <span className="text-gray-300">{country}</span>
+                <span className="text-text-dark">{country}</span>
               </motion.div>
             ))}
           </div>
           
           <div className="text-center mt-8">
-            <p className="text-gray-400">And many more countries available...</p>
+            <p className="text-text-light">And many more countries available...</p>
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-10 md:p-16 text-center">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink rounded-3xl p-10 md:p-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Choose your plan and start verifying accounts instantly with our reliable service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition">
+            <button className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition">
               Start Free Trial
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-blue-700 transition">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary-pink transition">
               Contact Sales
             </button>
           </div>

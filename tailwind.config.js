@@ -7,10 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        slate: {
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+        primary: {
+          pink: 'rgb(189, 47, 102)',
+          green: '#10b981',
+        },
+        background: {
+          light: '#f8fafc',
+          white: '#ffffff',
+        },
+        text: {
+          dark: '#1f2937',
+          light: '#6b7280',
         }
       },
       fontFamily: {

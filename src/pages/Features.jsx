@@ -9,17 +9,17 @@ const FeatureCard = ({ icon: Icon, title, desc, features, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay, duration: 0.5 }}
     viewport={{ once: true }}
-    className="p-8 rounded-2xl bg-slate-800/40 border border-white/5 hover:border-blue-500/50 transition-all"
+    className="p-8 rounded-2xl bg-background-white border border-gray-200 hover:border-primary-pink transition-all"
   >
-    <div className="w-16 h-16 rounded-lg bg-blue-600/20 flex items-center justify-center mb-6">
-      <Icon className="text-blue-400" size={32} />
+    <div className="w-16 h-16 rounded-lg bg-primary-pink/20 flex items-center justify-center mb-6">
+      <Icon className="text-primary-pink" size={32} />
     </div>
-    <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-    <p className="text-gray-400 mb-6 leading-relaxed">{desc}</p>
+    <h3 className="text-2xl font-bold text-text-dark mb-4">{title}</h3>
+    <p className="text-text-light mb-6 leading-relaxed">{desc}</p>
     <ul className="space-y-2">
       {features.map((feature, i) => (
-        <li key={i} className="flex items-center gap-3 text-gray-300">
-          <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+        <li key={i} className="flex items-center gap-3 text-text-dark">
+          <CheckCircle size={16} className="text-primary-green flex-shrink-0" />
           <span>{feature}</span>
         </li>
       ))}
@@ -105,7 +105,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-background-light text-text-dark">
       <Navbar />
       
       {/* Hero Section */}
@@ -117,13 +117,13 @@ const Features = () => {
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             Powerful Features for
-            <span className="text-blue-500"> Modern Verification</span>
+            <span className="text-primary-pink"> Modern Verification</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            className="text-xl text-text-light max-w-3xl mx-auto"
           >
             Discover why thousands of users trust Uchenzylogs for their SMS verification and social media growth needs.
           </motion.p>
@@ -143,11 +143,11 @@ const Features = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="text-blue-400" size={24} />
+                <div className="w-16 h-16 rounded-full bg-primary-pink/20 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="text-primary-pink" size={24} />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-3xl font-bold text-text-dark mb-2">{stat.number}</div>
+                <div className="text-text-light">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -158,8 +158,8 @@ const Features = () => {
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Everything You Need</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Everything You Need</h2>
+            <p className="text-text-light max-w-2xl mx-auto">
               Our comprehensive feature set ensures you have all the tools necessary for successful verification and growth.
             </p>
           </div>
@@ -174,18 +174,18 @@ const Features = () => {
 
       {/* CTA Section */}
       <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-10 md:p-16 text-center">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink rounded-3xl p-10 md:p-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Experience These Features?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied users who rely on our platform for their verification needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition">
+            <button className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition">
               Start Free Trial
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-blue-700 transition">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary-pink transition">
               View Pricing
             </button>
           </div>
