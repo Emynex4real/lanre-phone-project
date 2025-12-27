@@ -48,34 +48,34 @@ const ProcessFlow = () => {
     {
       step: "02", 
       title: "Select Service",
-      desc: "Choose your country and the platform you want to verify.",
+      desc: "Choose the platform and service you want to boost.",
       icon: Search,
       details: [
-        "50+ countries available",
-        "All major platforms supported",
+        "Instagram, TikTok, YouTube & more",
+        "Followers, likes, views, comments",
         "Real-time availability check"
       ]
     },
     {
       step: "03",
-      title: "Get Number",
-      desc: "Receive your virtual number instantly.",
+      title: "Place Order",
+      desc: "Enter your details and complete secure payment.",
       icon: Copy,
       details: [
-        "Instant number allocation",
-        "Copy with one click",
-        "Number valid for 20 minutes"
+        "Instant order confirmation",
+        "Multiple payment options",
+        "100% secure checkout"
       ]
     },
     {
       step: "04",
-      title: "Receive SMS",
-      desc: "Get your verification code in real-time.",
+      title: "Watch Growth",
+      desc: "See results delivered to your account in real-time.",
       icon: MessageSquare,
       details: [
-        "Average delivery under 10 seconds",
-        "Automatic refresh",
-        "Multiple attempts if needed"
+        "Orders start within minutes",
+        "Track progress in dashboard",
+        "24/7 customer support"
       ]
     }
   ];
@@ -86,7 +86,7 @@ const ProcessFlow = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">Simple 4-Step Process</h2>
           <p className="text-text-light max-w-2xl mx-auto">
-            Get your SMS verification code in under a minute with our streamlined process.
+            Grow your social media accounts in under a minute with our streamlined process.
           </p>
         </div>
 
@@ -104,12 +104,12 @@ const ProcessFlow = () => {
 };
 
 const VideoDemo = () => (
-  <div className="py-24 bg-slate-800/30">
+  <div className="py-24 bg-gradient-to-br from-primary-pink/5 to-primary-pink/10">
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">See It In Action</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Watch how easy it is to get your verification code with Uchenzylogs.
+        <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">See It In Action</h2>
+        <p className="text-text-light max-w-2xl mx-auto">
+          Watch how easy it is to boost your social media with Uchenzylogs.
         </p>
       </div>
 
@@ -120,14 +120,14 @@ const VideoDemo = () => (
         viewport={{ once: true }}
         className="relative max-w-4xl mx-auto"
       >
-        <div className="aspect-video bg-slate-800 rounded-2xl border border-white/10 flex items-center justify-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
-          <button className="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all group">
-            <Play className="text-white ml-1 group-hover:scale-110 transition-transform" size={32} />
+        <div className="aspect-video bg-white rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-pink/10 to-primary-pink/5"></div>
+          <button className="relative z-10 w-20 h-20 rounded-full bg-primary-pink/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary-pink/30 transition-all group shadow-lg">
+            <Play className="text-primary-pink ml-1 group-hover:scale-110 transition-transform" size={32} />
           </button>
-          <div className="absolute bottom-4 left-4 text-white">
-            <div className="text-sm opacity-75">Demo Video</div>
-            <div className="text-lg font-semibold">How to Get Your First SMS</div>
+          <div className="absolute bottom-4 left-4 text-text-dark">
+            <div className="text-sm text-text-light">Demo Video</div>
+            <div className="text-lg font-semibold">How to Place Your First Order</div>
           </div>
         </div>
       </motion.div>
@@ -138,28 +138,28 @@ const VideoDemo = () => (
 const FAQ = () => {
   const faqs = [
     {
-      q: "How long does it take to receive an SMS?",
-      a: "Most SMS messages are delivered within 10 seconds. In rare cases, it may take up to 2 minutes depending on the carrier."
+      q: "How long does it take to see results?",
+      a: "Most orders start within 5-10 minutes. Delivery speed depends on the service, but typically completes within a few hours."
     },
     {
-      q: "What happens if I don't receive the SMS?",
-      a: "If you don't receive an SMS within 5 minutes, you can request a refund or try a different number at no extra cost."
+      q: "Are the followers/likes real?",
+      a: "Yes, we provide high-quality engagement from real accounts. All services are safe and comply with platform guidelines."
     },
     {
-      q: "Can I use the same number multiple times?",
-      a: "Each number is single-use for security reasons. You'll need to get a new number for each verification."
+      q: "What happens if I don't receive my order?",
+      a: "If your order doesn't complete, you can request a refund or replacement at no extra cost. We offer 24/7 support."
     },
     {
-      q: "Which countries and services do you support?",
-      a: "We support over 50 countries and all major platforms including WhatsApp, Telegram, Instagram, Facebook, and many more."
+      q: "Which platforms do you support?",
+      a: "We support Instagram, TikTok, YouTube, Twitter, Facebook, Vimeo, and many more. Check our services page for the full list."
     },
     {
-      q: "Is my data safe and private?",
-      a: "Yes, we don't store any personal information. All SMS messages are automatically deleted after 24 hours."
+      q: "Is my account safe?",
+      a: "Yes, we never ask for your password. All services are delivered safely without risking your account security."
     },
     {
-      q: "Do you offer bulk services?",
-      a: "Yes, we offer bulk verification services for businesses. Contact our sales team for custom pricing."
+      q: "Do you offer bulk or reseller services?",
+      a: "Yes, we offer bulk packages and reseller programs for agencies and businesses. Contact our sales team for custom pricing."
     }
   ];
 
@@ -214,7 +214,7 @@ const HowItWorks = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-text-light max-w-3xl mx-auto"
           >
-            Getting your SMS verification code is simple and fast. Follow our easy 4-step process.
+            Boost your social media presence in minutes with our simple process. Get followers, likes, views, and more.
           </motion.p>
         </div>
       </div>
@@ -225,15 +225,16 @@ const HowItWorks = () => {
 
       {/* CTA Section */}
       <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink rounded-3xl p-10 md:p-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink/90 rounded-3xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 relative z-10">
             Ready to Try It Yourself?
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of users who trust our platform for fast and reliable SMS verification.
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto relative z-10">
+            Join thousands of users who trust our platform for fast and reliable social media growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center gap-2 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <button className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center gap-2 justify-center shadow-lg">
               Get Started Now
               <ArrowRight size={20} />
             </button>
