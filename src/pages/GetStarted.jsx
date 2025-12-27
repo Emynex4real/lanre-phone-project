@@ -324,7 +324,7 @@ const GetStarted = () => {
 
               {/* Benefits */}
               <div className="mt-8 p-6 bg-primary-green/10 border border-primary-green/20 rounded-xl">
-                <h3 className="text-lg font-bold text-text-dark mb-4">Why Choose Uchenzylogs?</h3>
+                <h3 className="text-lg font-bold text-text-dark mb-4">Why Choose accounbooster?</h3>
                 <ul className="space-y-2 text-sm text-primary-green">
                   <li className="flex items-center gap-2">
                     <CheckCircle size={14} />

@@ -39,7 +39,7 @@ const Home = () => {
                 Start Growing Now <ChevronRight size={20} />
               </Link>
               <Link to="/services" className="px-8 py-4 rounded-full font-bold text-lg text-primary-pink border-2 border-primary-pink hover:bg-primary-pink hover:text-white transition-all backdrop-blur-sm">
-                View Pricing
+                Explore Services
               </Link>
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary-pink to-primary-pink/90 rounded-3xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
            <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 relative z-10">Ready to Skyrocket Your Online Presence?</h2>
-           <p className="text-white/90 mb-8 max-w-2xl mx-auto relative z-10">Join thousands of influencers and marketers who trust Uchenzylogs for their social media growth.</p>
+           <p className="text-white/90 mb-8 max-w-2xl mx-auto relative z-10">Join thousands of influencers and marketers who trust accountbooster for their social media growth.</p>
            <Link 
              to="/get-started"
              className="bg-white text-primary-pink px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg relative z-10 inline-block"

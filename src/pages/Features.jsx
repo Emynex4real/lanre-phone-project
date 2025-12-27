@@ -125,7 +125,7 @@ const Features = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-text-light max-w-3xl mx-auto"
           >
-            Discover why thousands of users trust Uchenzylogs for their SMS verification and social media growth needs.
+            Discover why thousands of users trust accountbooster for their SMS verification and social media growth needs.
           </motion.p>
         </div>
       </div>
