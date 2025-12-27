@@ -17,6 +17,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/features" className="text-text-light hover:text-primary-pink transition">Features</Link>
             <Link to="/services" className="text-text-light hover:text-primary-pink transition">Services</Link>
+            <Link to="/other-services" className="text-text-light hover:text-primary-pink transition">Other Services</Link>
             <Link to="/how-it-works" className="text-text-light hover:text-primary-pink transition">How It Works</Link>
             <Link to="/login" className="text-text-light hover:text-primary-pink transition">Login</Link>
             <Link to="/get-started" className="bg-primary-pink text-white px-4 py-2 rounded-lg hover:bg-primary-pink/90 transition">
@@ -38,6 +39,7 @@ const Navbar = () => {
           <div className="md:hidden py-4 space-y-4">
             <Link to="/features" className="block text-text-light hover:text-primary-pink transition">Features</Link>
             <Link to="/services" className="block text-text-light hover:text-primary-pink transition">Services</Link>
+            <Link to="/other-services" className="block text-text-light hover:text-primary-pink transition">Other Services</Link>
             <Link to="/how-it-works" className="block text-text-light hover:text-primary-pink transition">How It Works</Link>
             <Link to="/login" className="block text-text-light hover:text-primary-pink transition">Login</Link>
             <Link to="/get-started" className="block bg-primary-pink text-white px-4 py-2 rounded-lg hover:bg-primary-pink/90 transition w-fit">
