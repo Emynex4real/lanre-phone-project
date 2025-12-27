@@ -49,7 +49,7 @@ const DashboardNavbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex-shrink-0 font-bold text-xl text-gray-900">
-              uchenzy<span className="text-blue-600">logs</span>
+              account<span className="text-blue-600">booster</span>
             </Link>
             <div className="hidden md:flex items-center space-x-1">
               <Link to="/dashboard" className="bg-gray-100 text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Dashboard</Link>
