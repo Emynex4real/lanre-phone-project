@@ -20,8 +20,12 @@ const Sidebar = () => {
       hasSubmenu: true,
       submenu: [
         { path: '/manage-orders/all', label: 'All Orders' },
-        { path: '/manage-orders/pending', label: 'Pending' },
-        { path: '/manage-orders/completed', label: 'Completed' }
+        { path: '/manage-orders/mass', label: 'Mass Orders' },
+        { path: '/manage-orders/pending', label: 'Pending Orders' },
+        { path: '/manage-orders/processing', label: 'Processing Orders' },
+        { path: '/manage-orders/completed', label: 'Completed Orders' },
+        { path: '/manage-orders/cancelled', label: 'Cancelled Orders' },
+        { path: '/manage-orders/refunded', label: 'Refunded Orders' }
       ]
     },
     { path: '/manage-deposit', icon: Wallet, label: 'Manage Deposit' },
